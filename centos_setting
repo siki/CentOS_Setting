@@ -1,15 +1,37 @@
+I've started github.
+At first
+[install git on CentOS]
+ 
+sudo vi /etc/yum.repo.d/git.repo
+ 
+[git]
+name=Base git repository
+baseurl=http://www.kernel.org/pub/software/scm/git/RPMS/$basearch
+enabled=1
+gpgcheck=0
+ 
+sudo vi /etc/yum.repo.d/rpmforge.repo
+ 
+[rpmforge]
+name = Red Hat Enterprise $releasever - RPMforge.net - dag
+mirrorlist = http://apt.sw.be/redhat/el5/en/mirrors-rpmforge
+enabled = 0
+gpgcheck = 0
+ 
+sudo yum install -y git-1.5.6.1 --enablerepo=rpmforge
+ 
 [make ssh key file]
 ssh-gen
-
+ 
 [user setting]
 useradd "username"
 passwd "password"
-
+ 
 [if user can switch to root user]
 usermod -G wheel "username"
-
+ 
 /etc/pam.d/su
-auth		required	pam_wheel.so use_uid
-
+auth required pam_wheel.so use_uid
+ 
 /etc/login.defs
 SU_WHEEL_ONLY yes
