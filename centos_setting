@@ -1,0 +1,14 @@
+[make ssh key file]
+ssh-gen -t rsa
+
+useradd "username"
+passwd "password"
+
+[if user can switch to root user]
+usermod -G wheel "username"
+
+/etc/pam.d/su
+auth		required	pam_wheel.so use_uid
+
+/etc/login.defs
+SU_WHEEL_ONLY yes
