@@ -1,6 +1,7 @@
 [make ssh key file]
-ssh-gen -t rsa
+ssh-gen
 
+[user setting]
 useradd "username"
 passwd "password"
 
