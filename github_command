@@ -1,0 +1,11 @@
+[make repository]
+git init
+[add file]
+git add centos_setting
+[commit]
+git commit -m 'first commit'
+[remote add]
+git remote add origin git@github.com:siki/CentOS_Setting.git
+[push]
+git push origin master
+
