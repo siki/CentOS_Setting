@@ -28,7 +28,10 @@ passwd "password"
  
 [if user can switch to root user]
 usermod -G wheel "username"
- 
+[ssh root login deny] 
+/etc/ssh/sshd_config
+PermitRootLogin no
+
 /etc/pam.d/su
 auth required pam_wheel.so use_uid
  
