@@ -1,43 +1,24 @@
 I've started github.
 At first
 [install git on CentOS]
-<<<<<<< HEAD:centos_setting
- 
-sudo vi /etc/yum.repo.d/git.repo
- 
-=======
-
 sudo vi /etc/yum.repo.d/git.repo
 
->>>>>>> aa6fa4ca8ac3c049876398bd3e1f4570b0c2c4aa:centos_setting
 [git]
 name=Base git repository
 baseurl=http://www.kernel.org/pub/software/scm/git/RPMS/$basearch
 enabled=1
 gpgcheck=0
-<<<<<<< HEAD:centos_setting
  
 sudo vi /etc/yum.repo.d/rpmforge.repo
- 
-=======
 
-sudo vi /etc/yum.repo.d/rpmforge.repo
-
->>>>>>> aa6fa4ca8ac3c049876398bd3e1f4570b0c2c4aa:centos_setting
 [rpmforge]
 name = Red Hat Enterprise $releasever - RPMforge.net - dag
 mirrorlist = http://apt.sw.be/redhat/el5/en/mirrors-rpmforge
 enabled = 0
 gpgcheck = 0
-<<<<<<< HEAD:centos_setting
  
 sudo yum install -y git-1.5.6.1 --enablerepo=rpmforge
- 
-=======
 
-sudo yum install -y git-1.5.6.1 --enablerepo=rpmforge
-
->>>>>>> aa6fa4ca8ac3c049876398bd3e1f4570b0c2c4aa:centos_setting
 [make ssh key file]
 ssh-gen
  
